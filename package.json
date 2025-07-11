@@ -1,19 +1,21 @@
+
 {
   "name": "fed-expectations",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "dependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "recharts": "^2.1.9",
-    "lucide-react": "^0.258.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "recharts": "^2.15.4",
+    "lucide-react": "^0.525.0"
   },
   "devDependencies": {
-    "typescript": "^4.9.5",
-    "@types/react": "^18.0.21",
-    "@types/react-dom": "^18.0.6",
-    "vite": "^4.0.0",
-    "@vitejs/plugin-react": "^3.0.0"
+    "typescript": "^5.7.2",
+    "@types/react": "^18.3.23",
+    "@types/react-dom": "^18.3.7",
+    "vite": "^6.0.5",
+    "@vitejs/plugin-react": "^4.3.4"
   },
   "scripts": {
     "dev": "vite",
