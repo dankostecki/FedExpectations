@@ -1,8 +1,7 @@
 {
   "quarters": [
-    "2025 Q2", "2025 Q3", "2025 Q4",
-    "2026 Q1", "2026 Q2", "2026 Q3",
-    "2026 Q4", "2027 Q4"
+    "2025 Q2", "2025 Q3", "2025 Q4", "2026 Q1", 
+    "2026 Q2", "2026 Q3", "2026 Q4", "2027 Q4"
   ],
   "interestRateMonthlyData": [
     { "period": "Jun", "25th Percentile": 4.38, "Median": 4.38, "75th Percentile": 4.38, "respondents": 54 },
@@ -21,18 +20,18 @@
     { "period": "2027 Q2", "25th Percentile": 2.88, "Median": 3.13, "75th Percentile": 3.38, "respondents": 47 },
     { "period": "2027 Q3", "25th Percentile": 2.88, "Median": 3.13, "75th Percentile": 3.63, "respondents": 47 },
     { "period": "2027 Q4", "25th Percentile": 3.00, "Median": 3.13, "75th Percentile": 3.50, "respondents": 47 },
-    { "period": "2028",     "25th Percentile": 3.00, "Median": 3.13, "75th Percentile": 3.63, "respondents": 49 },
-    { "period": "2029",     "25th Percentile": 3.00, "Median": 3.13, "75th Percentile": 3.63, "respondents": 49 }
+    { "period": "2028", "25th Percentile": 3.00, "Median": 3.13, "75th Percentile": 3.63, "respondents": 49 },
+    { "period": "2029", "25th Percentile": 3.00, "Median": 3.13, "75th Percentile": 3.63, "respondents": 49 }
   ],
   "rawData": [
-    { "quarter": "2025 Q2", "Skarbowe Papiery SOMA": null,  "MBS SOMA": null,  "Aktywa Fed (Suma)": null,  "Rezerwy": 3300, "Waluta w Obiegu": 2384, "Overnight Reverse Repo": 189, "Konto Skarbu Państwa": 450 },
-    { "quarter": "2025 Q3", "Skarbowe Papiery SOMA": null,  "MBS SOMA": null,  "Aktywa Fed (Suma)": null,  "Rezerwy": 3233, "Waluta w Obiegu": 2396, "Overnight Reverse Repo": 102, "Konto Skarbu Państwa": 470 },
-    { "quarter": "2025 Q4", "Skarbowe Papiery SOMA": 4185, "MBS SOMA": 2066, "Aktywa Fed (Suma)": 6621, "Rezerwy": 2994, "Waluta w Obiegu": 2410, "Overnight Reverse Repo": 50,  "Konto Skarbu Państwa": 750 },
-    { "quarter": "2026 Q1", "Skarbowe Papiery SOMA": 4208, "MBS SOMA": 2019, "Aktywa Fed (Suma)": 6598, "Rezerwy": 2957, "Waluta w Obiegu": 2423, "Overnight Reverse Repo": 50,  "Konto Skarbu Państwa": 800 },
-    { "quarter": "2026 Q2", "Skarbowe Papiery SOMA": 4255, "MBS SOMA": 1968, "Aktywa Fed (Suma)": 6598, "Rezerwy": 2929, "Waluta w Obiegu": 2435, "Overnight Reverse Repo": 50,  "Konto Skarbu Państwa": 800 },
-    { "quarter": "2026 Q3", "Skarbowe Papiery SOMA": 4325, "MBS SOMA": 1919, "Aktywa Fed (Suma)": 6604, "Rezerwy": 2907, "Waluta w Obiegu": 2450, "Overnight Reverse Repo": 43,  "Konto Skarbu Państwa": 800 },
-    { "quarter": "2026 Q4", "Skarbowe Papiery SOMA": 4394, "MBS SOMA": 1873, "Aktywa Fed (Suma)": 6625, "Rezerwy": 2908, "Waluta w Obiegu": 2464, "Overnight Reverse Repo": 40,  "Konto Skarbu Państwa": 800 },
-    { "quarter": "2027 Q4", "Skarbowe Papiery SOMA": 4710, "MBS SOMA": 1694, "Aktywa Fed (Suma)": 6689, "Rezerwy": 2948, "Waluta w Obiegu": 2520, "Overnight Reverse Repo": 28,  "Konto Skarbu Państwa": 800 }
+    { "quarter": "2025 Q2", "Skarbowe Papiery SOMA": null, "MBS SOMA": null, "Aktywa Fed (Suma)": null, "Rezerwy": 3300, "Waluta w Obiegu": 2384, "Overnight Reverse Repo": 189, "Konto Skarbu Państwa": 450 },
+    { "quarter": "2025 Q3", "Skarbowe Papiery SOMA": null, "MBS SOMA": null, "Aktywa Fed (Suma)": null, "Rezerwy": 3233, "Waluta w Obiegu": 2396, "Overnight Reverse Repo": 102, "Konto Skarbu Państwa": 470 },
+    { "quarter": "2025 Q4", "Skarbowe Papiery SOMA": 4185, "MBS SOMA": 2066, "Aktywa Fed (Suma)": 6621, "Rezerwy": 2994, "Waluta w Obiegu": 2410, "Overnight Reverse Repo": 50, "Konto Skarbu Państwa": 750 },
+    { "quarter": "2026 Q1", "Skarbowe Papiery SOMA": 4208, "MBS SOMA": 2019, "Aktywa Fed (Suma)": 6598, "Rezerwy": 2957, "Waluta w Obiegu": 2423, "Overnight Reverse Repo": 50, "Konto Skarbu Państwa": 800 },
+    { "quarter": "2026 Q2", "Skarbowe Papiery SOMA": 4255, "MBS SOMA": 1968, "Aktywa Fed (Suma)": 6598, "Rezerwy": 2929, "Waluta w Obiegu": 2435, "Overnight Reverse Repo": 50, "Konto Skarbu Państwa": 800 },
+    { "quarter": "2026 Q3", "Skarbowe Papiery SOMA": 4325, "MBS SOMA": 1919, "Aktywa Fed (Suma)": 6604, "Rezerwy": 2907, "Waluta w Obiegu": 2450, "Overnight Reverse Repo": 43, "Konto Skarbu Państwa": 800 },
+    { "quarter": "2026 Q4", "Skarbowe Papiery SOMA": 4394, "MBS SOMA": 1873, "Aktywa Fed (Suma)": 6625, "Rezerwy": 2908, "Waluta w Obiegu": 2464, "Overnight Reverse Repo": 40, "Konto Skarbu Państwa": 800 },
+    { "quarter": "2027 Q4", "Skarbowe Papiery SOMA": 4710, "MBS SOMA": 1694, "Aktywa Fed (Suma)": 6689, "Rezerwy": 2948, "Waluta w Obiegu": 2520, "Overnight Reverse Repo": 28, "Konto Skarbu Państwa": 800 }
   ],
   "metricColors": {
     "Skarbowe Papiery SOMA": "#10B981",
