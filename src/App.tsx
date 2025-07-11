@@ -1,9 +1,10 @@
 import React from 'react';
-import Dashboard from './components/Dashboard';
+import FedDashboard from './components/FedDashboard';
+import './index.css';
 
 const App: React.FC = () => (
   <div className="App">
-    <Dashboard />
+    <FedDashboard />
   </div>
 );
 
