@@ -1,1 +1,23 @@
-a
+{
+  "name": "fed-expectations",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "recharts": "^2.1.9",
+    "lucide-react": "^0.258.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.5",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "vite": "^4.0.0",
+    "@vitejs/plugin-react": "^3.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  }
+}
