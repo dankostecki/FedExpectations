@@ -1,8 +1,17 @@
 import React, { useState } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar } from 'recharts';
 import { TrendingUp, TrendingDown, Calculator, Eye, EyeOff, Download, Calendar } from 'lucide-react';
+import data from '../data/data.json';
 
 const FedDashboard = () => {
+  const {
+    quarters,
+    interestRateMonthlyData,
+    interestRateQuarterlyData,
+    rawData,
+    metricColors
+  } = data;
+
   const [selectedMetrics, setSelectedMetrics] = useState({
     'Skarbowe Papiery SOMA': true,
     'MBS SOMA': true,
@@ -13,55 +22,8 @@ const FedDashboard = () => {
     'Konto Skarbu Państwa': true
   });
 
-  const [fromQuarter, setFromQuarter] = useState('2025 Q2');
-  const [toQuarter, setToQuarter] = useState('2027 Q4');
-
-  const quarters = ['2025 Q2', '2025 Q3', '2025 Q4', '2026 Q1', '2026 Q2', '2026 Q3', '2026 Q4', '2027 Q4'];
-
-  // Dane dla stóp procentowych - miesięczne
-  const interestRateMonthlyData = [
-    { period: 'Jun', '25th Percentile': 4.38, 'Median': 4.38, '75th Percentile': 4.38, respondents: 54 },
-    { period: 'Jul', '25th Percentile': 4.38, 'Median': 4.38, '75th Percentile': 4.38, respondents: 54 },
-    { period: 'Sep', '25th Percentile': 4.13, 'Median': 4.13, '75th Percentile': 4.38, respondents: 54 },
-    { period: 'Oct', '25th Percentile': 4.13, 'Median': 4.13, '75th Percentile': 4.38, respondents: 54 },
-    { period: 'Dec', '25th Percentile': 3.88, 'Median': 3.88, '75th Percentile': 4.13, respondents: 54 },
-    { period: 'Jan', '25th Percentile': 3.63, 'Median': 3.88, '75th Percentile': 4.13, respondents: 54 },
-    { period: 'Mar', '25th Percentile': 3.63, 'Median': 3.63, '75th Percentile': 3.88, respondents: 54 }
-  ];
-
-  // Dane dla stóp procentowych - kwartalne
-  const interestRateQuarterlyData = [
-    { period: '2026 Q2', '25th Percentile': 3.38, 'Median': 3.63, '75th Percentile': 3.63, respondents: 54 },
-    { period: '2026 Q3', '25th Percentile': 3.13, 'Median': 3.38, '75th Percentile': 3.63, respondents: 54 },
-    { period: '2026 Q4', '25th Percentile': 2.88, 'Median': 3.38, '75th Percentile': 3.56, respondents: 54 },
-    { period: '2027 Q1', '25th Percentile': 2.88, 'Median': 3.13, '75th Percentile': 3.38, respondents: 47 },
-    { period: '2027 Q2', '25th Percentile': 2.88, 'Median': 3.13, '75th Percentile': 3.38, respondents: 47 },
-    { period: '2027 Q3', '25th Percentile': 2.88, 'Median': 3.13, '75th Percentile': 3.63, respondents: 47 },
-    { period: '2027 Q4', '25th Percentile': 3.00, 'Median': 3.13, '75th Percentile': 3.50, respondents: 47 },
-    { period: '2028', '25th Percentile': 3.00, 'Median': 3.13, '75th Percentile': 3.63, respondents: 49 },
-    { period: '2029', '25th Percentile': 3.00, 'Median': 3.13, '75th Percentile': 3.63, respondents: 49 }
-  ];
-
-  const rawData = [
-    { quarter: '2025 Q2', 'Skarbowe Papiery SOMA': null, 'MBS SOMA': null, 'Aktywa Fed (Suma)': null, 'Rezerwy': 3300, 'Waluta w Obiegu': 2384, 'Overnight Reverse Repo': 189, 'Konto Skarbu Państwa': 450 },
-    { quarter: '2025 Q3', 'Skarbowe Papiery SOMA': null, 'MBS SOMA': null, 'Aktywa Fed (Suma)': null, 'Rezerwy': 3233, 'Waluta w Obiegu': 2396, 'Overnight Reverse Repo': 102, 'Konto Skarbu Państwa': 470 },
-    { quarter: '2025 Q4', 'Skarbowe Papiery SOMA': 4185, 'MBS SOMA': 2066, 'Aktywa Fed (Suma)': 6621, 'Rezerwy': 2994, 'Waluta w Obiegu': 2410, 'Overnight Reverse Repo': 50, 'Konto Skarbu Państwa': 750 },
-    { quarter: '2026 Q1', 'Skarbowe Papiery SOMA': 4208, 'MBS SOMA': 2019, 'Aktywa Fed (Suma)': 6598, 'Rezerwy': 2957, 'Waluta w Obiegu': 2423, 'Overnight Reverse Repo': 50, 'Konto Skarbu Państwa': 800 },
-    { quarter: '2026 Q2', 'Skarbowe Papiery SOMA': 4255, 'MBS SOMA': 1968, 'Aktywa Fed (Suma)': 6598, 'Rezerwy': 2929, 'Waluta w Obiegu': 2435, 'Overnight Reverse Repo': 50, 'Konto Skarbu Państwa': 800 },
-    { quarter: '2026 Q3', 'Skarbowe Papiery SOMA': 4325, 'MBS SOMA': 1919, 'Aktywa Fed (Suma)': 6604, 'Rezerwy': 2907, 'Waluta w Obiegu': 2450, 'Overnight Reverse Repo': 43, 'Konto Skarbu Państwa': 800 },
-    { quarter: '2026 Q4', 'Skarbowe Papiery SOMA': 4394, 'MBS SOMA': 1873, 'Aktywa Fed (Suma)': 6625, 'Rezerwy': 2908, 'Waluta w Obiegu': 2464, 'Overnight Reverse Repo': 40, 'Konto Skarbu Państwa': 800 },
-    { quarter: '2027 Q4', 'Skarbowe Papiery SOMA': 4710, 'MBS SOMA': 1694, 'Aktywa Fed (Suma)': 6689, 'Rezerwy': 2948, 'Waluta w Obiegu': 2520, 'Overnight Reverse Repo': 28, 'Konto Skarbu Państwa': 800 }
-  ];
-
-  const metricColors = {
-    'Skarbowe Papiery SOMA': '#10B981',
-    'MBS SOMA': '#F59E0B',
-    'Aktywa Fed (Suma)': '#EF4444',
-    'Rezerwy': '#8B5CF6',
-    'Waluta w Obiegu': '#3B82F6',
-    'Overnight Reverse Repo': '#F97316',
-    'Konto Skarbu Państwa': '#EC4899'
-  };
+  const [fromQuarter, setFromQuarter] = useState(quarters[0]);
+  const [toQuarter, setToQuarter] = useState(quarters[quarters.length - 1]);
 
   const toggleMetric = (metric) => {
     setSelectedMetrics(prev => ({
